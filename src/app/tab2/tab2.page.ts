@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { MasterListService } from '../services/photo.service';
 
 @Component({
@@ -8,4 +9,8 @@ import { MasterListService } from '../services/photo.service';
 })
 export class Tab2Page {
 	constructor(private masterListService: MasterListService) {}
+
+	ngOnInit() {
+		this.masterListService.getMasterList();
+	}
 }
