@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
 	providedIn: 'root',
@@ -8,12 +9,13 @@ import { Observable } from 'rxjs';
 export class MasterListService {
 	masterList: Observable<any>;
 
-	constructor(private httpClient: HttpClient) {}
+	constructor(public httpClient: HttpClient) {}
 
 	getMasterList() {
-		this.masterList = this.httpClient.get('https://swapi.dev/api/films');
-		this.masterList.subscribe((data) => {
-			console.log('Data', data.results);
-		});
+		return this.httpClient.get('https://swapi.dev/api/films').pipe(
+			map((res: any) => {
+				return res;
+			})
+		);
 	}
 }

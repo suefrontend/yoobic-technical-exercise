@@ -14,9 +14,14 @@
 </ion-content>
 
 <ion-content>
-	<ion-grid>
-		<ion-row>
-			<ion-col>TEST</ion-col>
-		</ion-row>
-	</ion-grid>
+	<ion-card *ngFor="let item of items">
+		<ion-card-header>
+			<ion-card-subtitle>{{item.title}}</ion-card-subtitle>
+			<ion-card-title>{{item.title}}</ion-card-title>
+		</ion-card-header>
+		<img
+			src="https://pbs.twimg.com/profile_images/1255786295500005376/onGOTAYC.jpg"
+		/>
+		<ion-card-content> {{item.opening_crawl}} </ion-card-content>
+	</ion-card>
 </ion-content>
