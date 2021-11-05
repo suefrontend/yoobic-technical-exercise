@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhotoService } from '../services/photo.service';
+import { MasterListService } from '../services/photo.service';
 
 @Component({
 	selector: 'app-tab2',
@@ -7,9 +7,5 @@ import { PhotoService } from '../services/photo.service';
 	styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-	constructor(public photoService: PhotoService) {}
-
-	addPhotoToGallery() {
-		this.photoService.addNewToGallery();
-	}
+	constructor(private masterListService: MasterListService) {}
 }
