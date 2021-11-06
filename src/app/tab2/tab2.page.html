@@ -16,7 +16,7 @@
 <ion-content>
 	<ion-card
 		*ngFor="let item of items"
-		[routerLink]="['/', 'masterlist', item.episode_id]"
+    routerLink="/masterlist-detail/{{item.episode_id}}"
 	>
 		<ion-card-header>
 			<ion-card-subtitle>{{item.title}}</ion-card-subtitle>
