@@ -13,9 +13,7 @@ export class MasterListPage {
 
   ngOnInit() {
     this.masterListService.getMasterList().subscribe((res) => {
-      console.log('loaded');
       this.items = res.results;
-      console.log('this.item', this.items);
     });
   }
 }
