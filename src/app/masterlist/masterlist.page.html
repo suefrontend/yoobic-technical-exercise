@@ -14,10 +14,9 @@
     </ion-toolbar>
   </ion-header>
   <app-explore-container name="Photo Gallery page"></app-explore-container>
-
   <ion-card
     *ngFor="let item of items"
-    routerLink="/masterlist-detail/{{item.episode_id}}"
+    routerLink="/masterlist/{{item.episode_id}}"
   >
     <ion-card-header>
       <ion-card-subtitle>{{item.title}}</ion-card-subtitle>

@@ -19,12 +19,12 @@ export class MasterListService {
     );
   }
   getMaster(test) {
-    console.log('test', test);
+    // console.log('test', test);
     return this.httpClient.get('https://swapi.dev/api/films').pipe(
       map((res: any) => {
         const data = res.results;
         const target = data.find((h) => h.episode_id === test);
-        console.log('4', target);
+        // console.log('4', target);
         return target;
       })
     );

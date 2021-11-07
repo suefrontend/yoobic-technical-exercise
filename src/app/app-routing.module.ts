@@ -9,14 +9,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
   { path: 'signin', component: SignIn },
   { path: 'masterlist', component: MasterListPage },
-  { path: 'masterlist-detail/:id', component: DetailPage },
+  { path: 'masterlist/:id', component: DetailPage },
 ];
 @NgModule({
-  declarations: [SignIn, MasterListPage, DetailPage],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

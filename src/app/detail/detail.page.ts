@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MasterListService } from '../services/photo.service';
 
@@ -12,7 +12,8 @@ export class DetailPage {
   constructor(
     private route: ActivatedRoute,
     private masterListService: MasterListService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ export class DetailPage {
 
   getMaster(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    console.log('id', id);
     this.masterListService
       .getMaster(id)
       .subscribe((target) => (this.item = target));

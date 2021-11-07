@@ -14,9 +14,9 @@ import { DetailPageRoutingModule } from './detail-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: DetailPage }]),
     DetailPageRoutingModule,
   ],
   declarations: [DetailPage],
+  exports: [DetailPage],
 })
 export class DetailPageModule {}

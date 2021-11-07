@@ -4,7 +4,7 @@ import { DetailPage } from './detail.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '/masterlist/:id',
     component: DetailPage,
   },
 ];
