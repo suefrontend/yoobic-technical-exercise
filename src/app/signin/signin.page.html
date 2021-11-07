@@ -10,21 +10,19 @@
   </ion-header>
   <!-- <app-explore-container name="Tab 1 page"> --><!-- Might delete later -->
   <ion-grid>
-    <form>
-      <ion-item lines="full">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
-      <ion-item lines="full">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
 
-      <ion-row>
-        <ion-button type="submit" expand="block">Sign In</ion-button>
-      </ion-row>
-    </form>
+    <ion-row>
+      <ion-button expand="block" (click)="signin()">Sign In</ion-button>
+    </ion-row>
   </ion-grid>
   <!-- </app-explore-container> --><!-- Might delete later -->
 </ion-content>

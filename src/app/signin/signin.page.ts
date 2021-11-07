@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['signin.page.scss'],
 })
 export class SignIn {
-  constructor() {}
+  constructor(private route: Router) {}
+
+  signin() {
+    this.route.navigate(['/masterlist']);
+  }
 }
