@@ -2,8 +2,9 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <button (click)="goBack()">go back</button>
     </ion-buttons>
-    <ion-title> IONIC </ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +16,7 @@
   </ion-header>
 
   <app-explore-container name="Tab 3 page"></app-explore-container>
-  <p>{{item.title}}</p>
+  <p>TEST {{item.title}}</p>
   <img
     src="https://pbs.twimg.com/profile_images/1255786295500005376/onGOTAYC.jpg"
   />

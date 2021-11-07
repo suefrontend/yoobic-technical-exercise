@@ -26,4 +26,8 @@ export class DetailPage {
       .getMaster(id)
       .subscribe((target) => (this.item = target));
   }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
