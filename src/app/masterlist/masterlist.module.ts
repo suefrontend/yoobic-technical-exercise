@@ -17,5 +17,6 @@ import { MasterListRoutingModule } from './masterlist-routing.module';
     MasterListRoutingModule,
   ],
   declarations: [MasterListPage],
+  exports: [MasterListPage],
 })
-export class Tab2PageModule {}
+export class MasterListPageModule {}

@@ -4,7 +4,7 @@ import { MasterListPage } from './masterlist.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '/masterlist',
     component: MasterListPage,
   },
 ];

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SignIn } from './signin/signin.page';
 import { MasterListPage } from './masterlist/masterlist.page';
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'masterlist-detail/:id', component: DetailPage },
 ];
 @NgModule({
+  declarations: [SignIn, MasterListPage, DetailPage],
   imports: [
+    CommonModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
   exports: [RouterModule],
