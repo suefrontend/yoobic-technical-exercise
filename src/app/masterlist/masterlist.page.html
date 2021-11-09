@@ -15,7 +15,10 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-card *ngFor="let item of items">
+    <ion-card
+      *ngFor="let item of items"
+      routerLink="/masterlist/{{item.episode_id}}"
+    >
       <img src="https://dummyimage.com/1200x400/c9c9c9/ffffff&text=IMAGE" />
 
       <ion-card-header>
@@ -24,13 +27,7 @@
       <ion-card-content>
         {{item.opening_crawl.substring(0,200)}} ...
       </ion-card-content>
-      <ion-toolbar
-        color="primary"
-        class="link"
-        routerLink="/masterlist/{{item.episode_id}}"
-      >
-        Read more
-      </ion-toolbar>
+      <ion-toolbar color="primary" class="link-text"> Read more </ion-toolbar>
     </ion-card>
   </ion-content>
 </ion-app>
