@@ -1,21 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      <button (click)="goBack()">go back</button>
-    </ion-buttons>
-    <ion-title></ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">IONIC</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        <ion-title>{{item?.title}}</ion-title>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-  <p>{{item?.title}}</p>
-  <p>{{item?.opening_crawl}}</p>
-</ion-content>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">{{item?.title}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-card>
+      <ion-card-header>
+        <img
+          src="https://dummyimage.com/1200x800/c9c9c9/ffffff&text=IMAGE"
+          alt="{{item?.title}}"
+        />
+        <ion-card-title class="large"> {{item?.title}} </ion-card-title>
+      </ion-card-header>
+      <ion-card-content> {{item?.opening_crawl}} </ion-card-content>
+      <ion-toolbar color="primary" class="link">
+        <ion-back-button defaultHref="masterlist" text="Back"></ion-back-button>
+      </ion-toolbar>
+    </ion-card>
+  </ion-content>
+</ion-app>
