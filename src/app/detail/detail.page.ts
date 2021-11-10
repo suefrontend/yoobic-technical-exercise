@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { MasterListService } from '../services/photo.service';
+import { MasterListService } from '../services/masterlist.service';
 
 @Component({
   selector: 'app-detail',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MasterListService } from '../services/photo.service';
+import { MasterListService } from '../services/masterlist.service';
 
 @Component({
   selector: 'app-masterlist',
