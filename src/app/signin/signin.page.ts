@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class SignIn {
   constructor(private route: Router) {}
 
-  signin() {
-    this.route.navigate(['/masterlist']);
+  submitForm() {
+    // this.route.navigate(['/masterlist']);
+    this.route.navigateByUrl('masterlist');
   }
 }
