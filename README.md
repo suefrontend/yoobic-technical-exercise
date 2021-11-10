@@ -11,4 +11,4 @@ npm install
 ionic serve
 ```
 
-It will open [http://localhost:8100/signup]http://localhost:8100/signup
+It will open http://localhost:8100/signup
