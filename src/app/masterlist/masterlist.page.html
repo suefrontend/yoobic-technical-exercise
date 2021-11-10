@@ -22,10 +22,10 @@
       <img src="https://dummyimage.com/1200x400/c9c9c9/ffffff&text=IMAGE" />
 
       <ion-card-header>
-        <ion-card-title>{{item.title}}</ion-card-title>
+        <ion-card-title>{{item?.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        {{item.opening_crawl.substring(0,200)}} ...
+        {{item?.opening_crawl.substring(0,200)}} ...
       </ion-card-content>
       <ion-toolbar color="primary" class="link-text"> Read more </ion-toolbar>
     </ion-card>

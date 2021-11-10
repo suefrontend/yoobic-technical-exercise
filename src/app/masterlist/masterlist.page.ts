@@ -13,7 +13,7 @@ export class MasterListPage {
 
   ngOnInit() {
     this.masterListService.getMasterList().subscribe((res) => {
-      this.items = res.results;
+      this.items = res;
     });
   }
 }
